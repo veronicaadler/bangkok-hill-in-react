@@ -4,6 +4,7 @@
 
 .jumbotron {
   background-color: #fba75b;
+  font-family: 'Baloo 2', 'Open Sans', sans-serif;
 }
 
 body {
@@ -89,7 +90,7 @@ footer {
 .btn {
     background-color: #ca615c;
     border: 1px solid black;
-    color: white;
+    color: white
 }
 
 

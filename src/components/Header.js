@@ -15,8 +15,8 @@ function Header() {
                     </div>
                     <div className="col align-self-center col-lg-2 text-center">
                         <a href="tel:+19783430555" 
-                        type="button" className="btn btn-lg text-nowrap btn-link" 
-                        role="button"><Button>Order Now</Button>
+                        type="button" className="text-nowrap btn-link" 
+                        role="button"><Button className="btn btn-lg">Order Now</Button>
                         </a>
                     </div>
                 </div>
