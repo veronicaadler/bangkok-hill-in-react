@@ -1,6 +1,6 @@
 import React from "react";
 import { Jumbotron, Button } from 'reactstrap';
-import NavbarComponent from "./Navbar"
+import NavbarComponent from "./HomepageComponents/Navbar"
 
 function Header() {
     return (

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
+import { NavLink } from "react-router-dom"
 
 
 const NavbarComponent = (props) => {
@@ -14,13 +15,13 @@ const NavbarComponent = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="">HOME</NavLink>
+              <NavLink className="nav-link" to="/">HOME</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">MENU</NavLink>
+              <NavLink className="nav-link" to="/menu">MENU</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">ABOUT</NavLink>
+              <NavLink className="nav-link" to="/about">ABOUT</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

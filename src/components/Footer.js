@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import { Link } from "react-router-dom"
 
 function Footer() {
     return(
@@ -8,9 +9,9 @@ function Footer() {
                 <div className="col-sm-2 text-center text-sm-left pb-3">
                     <h5>Navigation</h5>
                     <ul className="list-unstyled">
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">MENU</a></li>
-                        <li><a href="">ABOUT</a></li>
+                        <li><Link to="/">HOME</Link></li>
+                        <li><Link to="/menu">MENU</Link></li>
+                        <li><Link to="/about">ABOUT</Link></li>
                     </ul>
                 </div>
                 <div className="col text-center pb-5">
