@@ -1,6 +1,6 @@
 import React from "react"
 import CardDeckItems from "./CardDeckItems"
-import CardDeckInfo from "../shared/carddeckinfo"
+import CardDeckInfo from "../../shared/carddeckinfo"
 
 function CardDeck() {
     const CompiledCardDeck = CardDeckInfo.map(card => <CardDeckItems key={card.id} card={card} />)
