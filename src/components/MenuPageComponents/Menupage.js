@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import classnames from 'classnames';
-import FullMenu from "./FullMenu"
+import FullMenu from "./FullMenu";
 import LunchSpecials from "./LunchSpecials"
 
 

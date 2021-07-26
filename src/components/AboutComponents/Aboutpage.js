@@ -1,8 +1,12 @@
 import React from "react";
+import CarouselComponent from "./Carousel"
 
 function AboutPage() {
     return (
-        <p>"This is the About page."</p>
+        <div>
+            <p>"This is the About page."</p>
+            <CarouselComponent />
+        </div>
     )
 }
 
