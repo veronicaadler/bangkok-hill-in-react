@@ -1,6 +1,7 @@
 import React from "react";
 import { Jumbotron, Button } from 'reactstrap';
-import NavbarComponent from "./HomepageComponents/Navbar"
+import NavbarComponent from "./HomepageComponents/Navbar";
+import { Link } from "react-router-dom"
 
 function Header() {
     return (
@@ -8,7 +9,7 @@ function Header() {
             <div className="container">
                 <div className="row">
                     <div className="col d-none d-sm-block">
-                        <img src="assets/blacklogo.png" alt="Bangkok Hill Logo" className="img-fluid logo" />
+                    <Link to="/"><img src="assets/blacklogo.png" alt="Bangkok Hill Logo" className="img-fluid logo" /></Link>
                     </div>
                     <div className="col-sm-auto">
                         <NavbarComponent />

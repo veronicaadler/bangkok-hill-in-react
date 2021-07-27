@@ -15,7 +15,7 @@ const NavbarComponent = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink className="nav-link" to="/">HOME</NavLink>
+              <NavLink className="nav-link" exact to="/">HOME</NavLink>
             </NavItem>
             <NavItem>
               <NavLink className="nav-link" to="/menu">MENU</NavLink>

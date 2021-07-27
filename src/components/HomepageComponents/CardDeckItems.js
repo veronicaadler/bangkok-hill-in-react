@@ -3,11 +3,11 @@ import React from "react"
 function CardDeckItems(props) {
 
     return (
-        <div class="card">
+        <div className="card">
             <img src={props.card.src}
-                class="card-img-top" alt={props.card.alt} />
-            <div class="card-body">
-                <h5 class="card-title">{props.card.title}</h5>
+                className="card-img-top" alt={props.card.alt} />
+            <div className="card-body">
+                <h5 className="card-title">{props.card.title}</h5>
                 <p>{props.card.description}</p>
             </div>
         </div>

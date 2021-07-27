@@ -2,9 +2,9 @@ import React from "react"
 
 function SecondHero() {
     return(
-    <div class="container-fluid" id="container">
-        <div class="row">
-            <div class="col bgimage" id="lowerhero">
+    <div className="container-fluid" id="container">
+        <div className="row">
+            <div className="col bgimage" id="lowerhero">
             </div>
         </div>
     </div>

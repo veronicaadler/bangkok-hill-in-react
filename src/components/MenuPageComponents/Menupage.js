@@ -5,7 +5,7 @@ import FullMenu from "./FullMenu";
 import LunchSpecials from "./LunchSpecials"
 
 
-const MenuPage= (props) => {
+function MenuPage() {
   const [activeTab, setActiveTab] = useState('1');
 
   const toggle = tab => {
