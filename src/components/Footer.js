@@ -9,7 +9,7 @@ function Footer() {
                 <div className="col-sm-2 text-center text-sm-left pb-3">
                     <h5>Navigation</h5>
                     <ul className="list-unstyled">
-                        <li><Link to="/">HOME</Link></li>
+                        <li><Link exact to="/">HOME</Link></li>
                         <li><Link to="/menu">MENU</Link></li>
                         <li><Link to="/about">ABOUT</Link></li>
                     </ul>

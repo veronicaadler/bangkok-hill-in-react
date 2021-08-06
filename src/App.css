@@ -38,6 +38,11 @@ a:link {
   background-color: #fba75b;
 }
 
+.card-deck > .card:hover {
+  border-color: black;
+  box-shadow: 0 0 2rem black;
+}
+
 .card-title {
   color: white;
   text-shadow:1px 1px #333;
