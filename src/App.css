@@ -153,6 +153,10 @@ footer {
   font-size: 1em;  
 }
 
+Form {
+  justify-content: center;
+}
+
 .page-enter {
   opacity: 0;
 }
