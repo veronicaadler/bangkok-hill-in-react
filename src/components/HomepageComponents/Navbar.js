@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
-import { NavLink } from "react-router-dom"
-
+import React, { useState } from "react";
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
+import { NavLink } from "react-router-dom";
 
 const NavbarComponent = (props) => {
   const [collapsed, setCollapsed] = useState(true);
@@ -10,24 +9,30 @@ const NavbarComponent = (props) => {
 
   return (
     <React.Fragment>
-      <Navbar className= "navbar-expand-sm navbar-light justify-content-center">
+      <Navbar className="navbar-expand-sm navbar-light justify-content-center">
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink className="nav-link" exact to="/">HOME</NavLink>
+              <NavLink className="nav-link" exact to="/">
+                HOME
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="nav-link" to="/menu">MENU</NavLink>
+              <NavLink className="nav-link" to="/menu">
+                MENU
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="nav-link" to="/about">ABOUT</NavLink>
+              <NavLink className="nav-link" to="/about">
+                ABOUT
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
     </React.Fragment>
   );
-}
+};
 
 export default NavbarComponent;

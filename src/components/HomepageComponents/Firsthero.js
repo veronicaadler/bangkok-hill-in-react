@@ -1,18 +1,18 @@
-import React from "react"
+import React from "react";
 
 function FirstHero() {
-    return (
-        <div className="container-fluid text-center">
-        <div className="row">
-            <div className="col bgimage">
-                <div className="hero-text">
-                    <h1>BANGKOK HILL</h1>
-                    <h2>ORIGINAL THAI CUISINE</h2>
-                </div>
-            </div>
+  return (
+    <div className="container-fluid text-center">
+      <div className="row">
+        <div className="col bgimage">
+          <div className="hero-text">
+            <h1>BANGKOK HILL</h1>
+            <h2>ORIGINAL THAI CUISINE</h2>
+          </div>
         </div>
+      </div>
     </div>
-    )
+  );
 }
 
-export default FirstHero
+export default FirstHero;

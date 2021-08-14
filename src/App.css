@@ -1,15 +1,15 @@
 .logo {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .jumbotron {
   background-color: #fba75b;
-  font-family: 'Baloo 2', 'Open Sans', sans-serif;
+  font-family: "Baloo 2", "Open Sans", sans-serif;
 }
 
 body {
   background-color: #f0f7f0;
-  font-family: 'Baloo 2', 'Open Sans', sans-serif;
+  font-family: "Baloo 2", "Open Sans", sans-serif;
   color: black;
 }
 
@@ -26,7 +26,7 @@ footer a {
 }
 
 #menu a {
-  color: #324443
+  color: #324443;
 }
 
 a:link {
@@ -45,7 +45,7 @@ a:link {
 
 .card-title {
   color: white;
-  text-shadow:1px 1px #333;
+  text-shadow: 1px 1px #333;
 }
 
 #chefcard {
@@ -63,20 +63,19 @@ a:link {
 }
 
 .bgimage {
-  width:100%;
-  height:100vh;
-  background: url('https://images.unsplash.com/photo-1559314809-0d155014e29e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  width: 100%;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1559314809-0d155014e29e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
   background-repeat: no-repeat;
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   background-attachment: fixed;
 }
 
 #lowerhero {
-    background-image: url("https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
-    height: 100vh;
-  }
-
+  background-image: url("https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+  height: 100vh;
+}
 
 footer {
   background-color: #fba75b;
@@ -89,15 +88,14 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  text-shadow:2px 2px #333;
+  text-shadow: 2px 2px #333;
 }
 
 .btn {
-    background-color: #ca615c;
-    border: 1px solid black;
-    color: white
+  background-color: #ca615c;
+  border: 1px solid black;
+  color: white;
 }
-
 
 #homepagetable {
   color: white;
@@ -126,13 +124,13 @@ footer {
 .socialbtn {
   background-color: #324443;
   border: none;
-  margin-right: .25rem;
+  margin-right: 0.25rem;
 }
 
-.carousel-item{
+.carousel-item {
   overflow: hidden;
 }
-.carousel-item img{
+.carousel-item img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
@@ -150,7 +148,7 @@ footer {
 
 #bangkoklink {
   font-family: "Open Sans", sans-serif;
-  font-size: 1em;  
+  font-size: 1em;
 }
 
 Form {
@@ -174,7 +172,6 @@ Form {
   opacity: 0;
   transition: 300ms ease-in;
 }
-
 
 .page-enter {
   opacity: 0;

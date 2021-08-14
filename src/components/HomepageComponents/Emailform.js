@@ -1,32 +1,41 @@
 import React, { Component } from "react";
-import { Button, Form, FormGroup, Label, Input, FormFeedback } from "reactstrap";
+import {
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormFeedback,
+} from "reactstrap";
 
 class EmailForm extends Component {
   constructor() {
     super();
     this.state = {
       email: "",
-      error: ""
+      error: "",
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleBlur = this.handleBlur.bind(this)
+    this.handleBlur = this.handleBlur.bind(this);
   }
 
   handleChange(event) {
     const { name, value } = event.target;
     this.setState({
-    [name]: value,
+      [name]: value,
     });
-}
+  }
 
   handleBlur() {
     if (!this.state.email.includes("@")) {
       this.setState({
-          error: "Please enter a valid email address"
-      })} else {
+        error: "Please enter a valid email address",
+      });
+    } else {
       this.setState({
-          error: ""
-      })}
+        error: "",
+      });
+    }
   }
 
   render() {

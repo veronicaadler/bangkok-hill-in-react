@@ -1,14 +1,13 @@
-import React from "react"
+import React from "react";
 
 function SecondHero() {
-    return(
+  return (
     <div className="container-fluid" id="container">
-        <div className="row">
-            <div className="col bgimage" id="lowerhero">
-            </div>
-        </div>
+      <div className="row">
+        <div className="col bgimage" id="lowerhero"></div>
+      </div>
     </div>
-    )
+  );
 }
 
-export default SecondHero
+export default SecondHero;

@@ -4,19 +4,15 @@ import CardDeck from "./CardDeck";
 import SecondHero from "./Secondhero";
 import CardTable from "./Cardtable";
 
-
 function Homepage() {
-
-    return (
-        <div>
-            < FirstHero />
-            < CardDeck />
-            < SecondHero />
-            < CardTable />
-        </div>
-    )
+  return (
+    <div>
+      <FirstHero />
+      <CardDeck />
+      <SecondHero />
+      <CardTable />
+    </div>
+  );
 }
 
-
-export default Homepage
-
+export default Homepage;
