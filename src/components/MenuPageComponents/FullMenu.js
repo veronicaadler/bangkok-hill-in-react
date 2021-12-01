@@ -1,5 +1,7 @@
-import React from "react";
 import SpiceLevel from "./SpiceLevel";
+import { v4 as uuidv4 } from "uuid";
+import Menu from "../../shared/menu";
+import { Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
 
 function FullMenu() {
   return (
@@ -10,6 +12,93 @@ function FullMenu() {
           <img src="assets/menu.png" alt="Bangkok Hill Logo" />
         </div>
       </div>
+      {Menu.map((item) => {
+        if (item.header) {
+          return (
+            <Row>
+              <Col className="col text-center">
+                <h3 className="menuheadings">{item.header}</h3>
+              </Col>
+            </Row>
+          )
+        }
+        if (item.subheader) {
+          return (
+          <Row className="row">
+            <Col className="col text-center">
+              <h5 className="mb-5">
+                Served with your choice of white or brown rice.
+              </h5>
+            </Col>
+          </Row>
+          )
+        }
+        if (item.regmenuitem) {
+          return (
+            <Card>
+              <Row>
+                <Col>
+                <img src="assets/menuitems/thairoll.jpeg"></img>
+                </Col>
+                <Col>
+                <CardBody>
+                  <CardTitle>
+                    {item.title}
+                  </CardTitle>
+                  <CardText>
+                    {item.description}
+                  </CardText>
+                  <CardText>
+                    {item.price}
+                  </CardText>
+                </CardBody>
+                </Col>
+              </Row>
+            </Card>
+            /*<div className="text-center">
+              <Col className="">
+                <img src="assets/menuitems/thairoll.jpeg"></img>
+                <h5>{item.title}</h5>
+                <p className="mb-1">{item.description}</p>
+                <p className="">${item.price}</p>
+              </Col>
+            </div>*/
+          )
+        }
+        if (item.protein) {
+          return (
+          <div>
+            <Col className="col-10 col-sm-7 col-md-3">
+              <h5>{item.title}</h5>
+              <p>{item.description}</p>
+            </Col>
+            <Col className="col-2 col-sm-3">
+              <Row className="row">
+                <Col className="col">
+                  <p>Lunch</p>
+                  <p className="text-nowrap">{item.lunchprice}</p>
+                </Col>
+                <Col className="col">
+                  <p>Dinner</p>
+                  <p className="text-nowrap">{item.dinnerprice}</p>
+                </Col>
+              </Row>
+            </Col>
+          </div>
+          )
+        }
+        if (item.createyourown) {
+          return (
+          <div className="col-10 col-md-4">
+            <h5>{item.title}</h5>
+            <p>{item.description}</p>
+          </div>
+          )
+        } else {
+          return <div></div>
+        }
+      })}
+
       <div className="row">
         <div className="col text-center">
           <h3 className="menuheadings">STARTERS</h3>
