@@ -12,10 +12,12 @@ function FullMenu() {
           <img src="assets/menu.png" alt="Bangkok Hill Logo" />
         </div>
       </div>
+      <Row>
+        <Col>
       {Menu.map((item) => {
         if (item.header) {
           return (
-            <Row>
+            <Row key={uuidv4()}>
               <Col className="col text-center">
                 <h3 className="menuheadings">{item.header}</h3>
               </Col>
@@ -24,8 +26,8 @@ function FullMenu() {
         }
         if (item.subheader) {
           return (
-          <Row className="row">
-            <Col className="col text-center">
+          <Row key={uuidv4()}>
+            <Col className="text-center">
               <h5 className="mb-5">
                 Served with your choice of white or brown rice.
               </h5>
@@ -33,71 +35,113 @@ function FullMenu() {
           </Row>
           )
         }
-        if (item.regmenuitem) {
+        if (item.noodleitem) {
+        return (
+          <Card key={uuidv4()} className="m-1 menucard">
+            <Row>
+              <Col>
+              <img src={item.img} alt={item.alt} />
+              </Col>
+              <Col>
+              <CardBody>
+                <CardTitle className="menucardtitle">
+                  {item.title}
+                </CardTitle>
+                <CardSubtitle className="mb-1">
+                  Lunch: ${item.lunchprice}
+                </CardSubtitle>
+                <CardSubtitle>
+                  Dinner: ${item.dinnerprice}
+                </CardSubtitle>
+                <CardText>
+                  {item.description}
+                </CardText>
+              </CardBody>
+              </Col>
+            </Row>
+          </Card>
+        )
+        
+        }
+        if (item.protein) {
           return (
-            <Card>
+            <Card key={uuidv4()} className='text-center m-1 menucard'>
+            <CardBody>
+              <CardTitle className="menucardtitle">
+                {item.title}
+              </CardTitle>
+              <CardText>
+                Lunch: ${item.lunchprice}
+              </CardText>
+              <CardText>
+                Dinner: ${item.dinnerprice}
+              </CardText>
+            </CardBody>
+            </Card>
+          )
+        }
+        if (item.side) {
+          return (
+            <Card key={uuidv4()} className='text-center m-1 menucard'>
+              <CardBody>
+                <CardTitle className="menucardtitle">
+                  {item.title}
+                </CardTitle>
+                <CardSubtitle>
+                  {item.price}
+                </CardSubtitle>
+              </CardBody>
+
+            </Card>
+          )
+        }
+        if (item.createyourown) {
+          return (
+            <Card key={uuidv4()} className="m-1 menucard">
+                <Row>
+                  <Col>
+                    <img src={item.img} alt={item.alt} />
+                  </Col>
+                  <Col>
+                  <CardBody>
+                    <CardTitle className="menucardtitle">
+                      {item.title}
+                    </CardTitle>
+                    <CardText>
+                      {item.description}
+                    </CardText>
+                  </CardBody>
+                  </Col>
+                </Row>
+            </Card>
+          )
+        } else {
+          return (
+            <Card key={uuidv4()} className="m-1 menucard">
               <Row>
                 <Col>
-                <img src="assets/menuitems/thairoll.jpeg"></img>
+                <img src={item.img} alt={item.alt} />
                 </Col>
                 <Col>
                 <CardBody>
-                  <CardTitle>
+                  <CardTitle className="menucardtitle">
                     {item.title}
                   </CardTitle>
+                  <CardSubtitle>
+                    ${item.price}
+                  </CardSubtitle>
                   <CardText>
                     {item.description}
-                  </CardText>
-                  <CardText>
-                    {item.price}
                   </CardText>
                 </CardBody>
                 </Col>
               </Row>
             </Card>
-            /*<div className="text-center">
-              <Col className="">
-                <img src="assets/menuitems/thairoll.jpeg"></img>
-                <h5>{item.title}</h5>
-                <p className="mb-1">{item.description}</p>
-                <p className="">${item.price}</p>
-              </Col>
-            </div>*/
           )
-        }
-        if (item.protein) {
-          return (
-          <div>
-            <Col className="col-10 col-sm-7 col-md-3">
-              <h5>{item.title}</h5>
-              <p>{item.description}</p>
-            </Col>
-            <Col className="col-2 col-sm-3">
-              <Row className="row">
-                <Col className="col">
-                  <p>Lunch</p>
-                  <p className="text-nowrap">{item.lunchprice}</p>
-                </Col>
-                <Col className="col">
-                  <p>Dinner</p>
-                  <p className="text-nowrap">{item.dinnerprice}</p>
-                </Col>
-              </Row>
-            </Col>
-          </div>
-          )
-        }
-        if (item.createyourown) {
-          return (
-          <div className="col-10 col-md-4">
-            <h5>{item.title}</h5>
-            <p>{item.description}</p>
-          </div>
-          )
-        } else {
-          return <div></div>
         }
       })}
+      </Col>
+      </Row>
 
       <div className="row">
         <div className="col text-center">

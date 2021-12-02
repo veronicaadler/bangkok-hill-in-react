@@ -33,7 +33,16 @@ a:link {
   font-size: 130%;
 }
 
-.card {
+.menucard {
+  background-color: #f0f7f1;
+  border: none;
+}
+
+.menucardtitle {
+  font-size: 1.25em;
+}
+
+.maincard {
   border: none;
   background-color: #fba75b;
 }
@@ -43,7 +52,7 @@ a:link {
   box-shadow: 0 0 2rem black;
 }
 
-.card-title {
+.maincardtitle {
   color: white;
   text-shadow: 1px 1px #333;
 }
