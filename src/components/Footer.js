@@ -10,7 +10,7 @@ function Footer() {
             <h5>Navigation</h5>
             <ul className="list-unstyled">
               <li>
-                <Link exact to="/">
+                <Link to="/">
                   HOME
                 </Link>
               </li>

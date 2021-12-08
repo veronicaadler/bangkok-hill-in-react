@@ -1,4 +1,6 @@
-import {Container, Row, Col, CardBody, CardTitle, Card, CardSubtitle, CardText, Button} from 'reactstrap';
+import {Container, Row, Col, CardBody, CardTitle, Card, CardSubtitle, CardText, Button,
+        Modal, ModalFooter, ModalHeader, ModalBody
+        } from 'reactstrap';
 import { useEffect, useState } from 'react';
 import SpiceLevel from "../MenuPageComponents/SpiceLevel";
 import { Link } from 'react-router-dom';
@@ -10,10 +12,12 @@ const OrderNow = () => {
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
   const [cart, setCart] = useState([]);
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
 
   const handleCart = (item) => {
       setCart([...cart, item]);
-      console.log(cart)
   } 
 
   const renderSpice = (spice) => {
@@ -59,6 +63,8 @@ const OrderNow = () => {
         })
   }, []);
 
+  const totalPrice = (cart.reduce((a, c) => a + parseInt(c.price), 0)).toFixed(2) 
+
   if (isPending) {
       return (
           <div>Loading...</div>
@@ -71,9 +77,34 @@ const OrderNow = () => {
   } else {
   return (
     <Container fluid>
-      <Row className="cartrow text-right sticky-top">
+      <Row className="cartrow text-right sticky-top p-2">
         <Col className="p-0 m-0">
-          <Link to="/cart" className="btn btn-large"><i className="fa fa-shopping-cart"></i> Cart ({cart.length})</Link>
+          <Button onClick={toggle} className="btn-large p-3 cartbutton">
+              <i className="fa fa-lg fa-shopping-cart"></i> Cart ({cart.length})
+            </Button>
+            <Modal isOpen={modal} toggle={toggle}>
+                <ModalHeader
+                    toggle={toggle}
+                >
+                    Your Order
+                </ModalHeader>
+                <ModalBody>
+                    {cart.map((product) => {
+                        return (
+                            <Row>
+                                <Col>
+                                    {product.title}
+                                </Col>
+                                <Col>
+                                    ${product.price}
+                                </Col>
+                            </Row>
+                        )
+                    })}
+                    <ModalFooter>Total: ${totalPrice}</ModalFooter>
+                    <Button>Pay Now</Button>
+                </ModalBody>
+            </Modal>
         </Col>
       </Row>
       <Row className="mt-3">
