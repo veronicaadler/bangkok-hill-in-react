@@ -1,9 +1,13 @@
 import React from "react";
 import CarouselComponent from "./Carousel";
 import AboutUsDescription from "./AboutUsDescription";
+import Header from "../Header";
+import Footer from "../Footer";
 
 function AboutPage() {
   return (
+    <div>
+    <Header />
     <div className="container-fluid" id="aboutus">
       <div className="row">
         <div className="col-12 p-3 mt-2">
@@ -22,6 +26,8 @@ function AboutPage() {
           <AboutUsDescription />
         </div>
       </div>
+    </div>
+    <Footer />
     </div>
   );
 }

@@ -1,5 +1,4 @@
-import React from "react";
-import { Jumbotron, Button } from "reactstrap";
+import { Jumbotron } from "reactstrap";
 import NavbarComponent from "./HomepageComponents/Navbar";
 import { Link } from "react-router-dom";
 
@@ -27,7 +26,7 @@ function Header() {
               className="text-nowrap btn-link"
               role="button"
             >
-              <Button className="btn btn-lg">Order Now</Button>
+              <Link to='/order' className="btn btn-lg">Order Now</Link>
             </a>
           </div>
         </div>

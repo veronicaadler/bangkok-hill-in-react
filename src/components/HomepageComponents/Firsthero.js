@@ -1,5 +1,3 @@
-import React from "react";
-
 function FirstHero() {
   return (
     <div className="container-fluid text-center">

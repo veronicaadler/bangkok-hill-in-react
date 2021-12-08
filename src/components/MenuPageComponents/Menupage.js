@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
 import classnames from "classnames";
 import FullMenu from "./FullMenu";
 import LunchSpecials from "./LunchSpecials";
+import Header from "../Header";
+import Footer from "../Footer";
 
-function MenuPage() {
+const MenuPage = () => {
   const [activeTab, setActiveTab] = useState("1");
 
   const toggle = (tab) => {
@@ -13,6 +15,7 @@ function MenuPage() {
 
   return (
     <div>
+    <Header />
       <Nav tabs>
         <NavItem>
           <NavLink
@@ -43,6 +46,7 @@ function MenuPage() {
           <LunchSpecials />
         </TabPane>
       </TabContent>
+    <Footer />
     </div>
   );
 }
