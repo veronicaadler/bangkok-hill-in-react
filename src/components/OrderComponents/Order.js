@@ -1,9 +1,8 @@
 import {Container, Row, Col, CardBody, CardTitle, Card, CardSubtitle, CardText, Button,
-        Modal, ModalFooter, ModalHeader, ModalBody
+        Modal, ModalFooter, ModalHeader, ModalBody,
         } from 'reactstrap';
 import { useEffect, useState } from 'react';
 import SpiceLevel from "../MenuPageComponents/SpiceLevel";
-import { Link } from 'react-router-dom';
 
 
 const OrderNow = () => {
@@ -16,9 +15,158 @@ const OrderNow = () => {
 
   const toggle = () => setModal(!modal);
 
-  const handleCart = (item) => {
-      setCart([...cart, item]);
-  } 
+  const buttonMargin = 'm-1'
+
+  const handleCart = (item, protein) => {
+    //this function automatically determines the price based on lunch or dinner hours
+    //it also takes an optional second parameter, protein, for Create Your Own items where the user must select a protein
+    let lunchTime = false;
+    const today = new Date();
+    const currentTime =
+      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    if (currentTime >= "11:30:00" && currentTime < "15:00:00") {
+      lunchTime = true;
+    }
+    if (protein) {
+      console.log(protein);
+      //sets the cart and cart prices based on whether its lunch and the type of protein requested in a Create Your Own dish
+      if (
+        (protein === "Chicken" ||
+          protein === "Beef" ||
+          protein === "Pork" ||
+          protein === "Tofu") &&
+        lunchTime === true
+      ) {
+        setCart([
+          ...cart,
+          {
+            id: item.id,
+            item: `${item.title} (${protein})`,
+            price: "8.00",
+          },
+        ]);
+      } else if (
+        (protein === "Chicken" ||
+          protein === "Beef" ||
+          protein === "Pork" ||
+          protein === "Tofu") &&
+        lunchTime === false
+      ) {
+        setCart([
+          ...cart,
+          {
+            id: item.id,
+            item: `${item.title} (${protein})`,
+            price: "12.00",
+          },
+        ]);
+      } else if (
+        (protein === "Shrimp" ||
+          protein === "Scallop" ||
+          protein === "Squid") &&
+        lunchTime === true
+      ) {
+        setCart([
+          ...cart,
+          {
+            id: item.id,
+            item: `${item.title} (${protein})`,
+            price: "9.00",
+          },
+        ]);
+      } else if (
+        (protein === "Shrimp" ||
+          protein === "Scallop" ||
+          protein === "Squid") &&
+        lunchTime === false
+      ) {
+        setCart([
+          ...cart,
+          {
+            id: item.id,
+            item: `${item.title} (${protein})`,
+            price: "16.00",
+          },
+        ]);
+      } else if (
+        (protein === "Seafood" || protein === "Duck") &&
+        lunchTime === true
+      ) {
+        setCart([
+          ...cart,
+          {
+            id: item.id,
+            item: `${item.title} + (${protein})`,
+            price: "10.00",
+          },
+        ]);
+      } else if (
+        (protein === "Seafood" || protein === "Duck") &&
+        lunchTime === false
+      ) {
+        setCart([
+          ...cart,
+          {
+            id: item.id,
+            item: `${item.title} (${protein})`,
+            price: "16.00",
+          },
+        ]);
+      } else if (protein === "Flounder Fillet" && lunchTime === false) {
+        setCart([
+          ...cart,
+          {
+            id: item.id,
+            item: `${item.title} + (${protein})`,
+            price: "10.00",
+          },
+        ]);
+      } else if (protein === "Flounder Fillet" && lunchTime === true) {
+        setCart([
+          ...cart,
+          {
+            id: item.id,
+            item: `${item.title} (${protein})`,
+            price: "20.00",
+          },
+        ]);
+      }
+    } else {
+      if (item.lunchprice && lunchTime === true) {
+        //for items with lunch prices, this condition determines whether its lunch time and if so,
+        //sets the appropriate lunch time price
+        setCart([
+          ...cart,
+          {
+            id: item.id,
+            item: item.title,
+            price: item.lunchprice,
+          },
+        ]);
+      } else if (item.dinnerprice && lunchTime === false) {
+        //sets the dinner price if it is dinner time
+        setCart([
+          ...cart,
+          {
+            id: item.id,
+            item: item.title,
+            price: item.dinnerprice,
+          },
+        ]);
+      } else {
+        //this final else statement is for items whos prices do not change whether its lunch or dinner
+        setCart([
+          ...cart,
+          {
+            id: item.id,
+            item: item.title,
+            price: item.price,
+          },
+        ]);
+      }
+    }
+  };
+  
 
   const renderSpice = (spice) => {
     if (spice === "Mild") {
@@ -91,18 +239,19 @@ const OrderNow = () => {
                 <ModalBody>
                     {cart.map((product) => {
                         return (
-                            <Row>
+                            <Row key={product.id}>
                                 <Col>
-                                    {product.title}
+                                    {product.item}
                                 </Col>
                                 <Col>
                                     ${product.price}
+
                                 </Col>
                             </Row>
                         )
                     })}
                     <ModalFooter>Total: ${totalPrice}</ModalFooter>
-                    <Button>Pay Now</Button>
+                    <Button>Proceed to Checkout</Button>
                 </ModalBody>
             </Modal>
         </Col>
@@ -196,7 +345,17 @@ const OrderNow = () => {
                           {item.title}{renderSpice(item.spice)}
                         </CardTitle>
                         <CardText>{item.description}</CardText>
-                        <Button onClick={() => handleCart(item)}>Add To Order</Button>
+                        <CardSubtitle>Order with: </CardSubtitle>
+                        <Button className={buttonMargin} onClick={() => handleCart(item, 'Chicken')}>Chicken</Button>
+                                  <Button className={buttonMargin} onClick={() => handleCart(item, 'Beef')}>Beef</Button>
+                                  <Button className={buttonMargin} onClick={() => handleCart(item, 'Pork')}>Pork</Button>
+                                  <Button className={buttonMargin} onClick={() => handleCart(item, 'Tofu')}>Tofu</Button>
+                                  <Button className={buttonMargin} onClick={() => handleCart(item, 'Shrimp')}>Shrimp</Button>
+                                  <Button className={buttonMargin} onClick={() => handleCart(item, 'Scallop')}>Scallop</Button>
+                                  <Button className={buttonMargin} onClick={() => handleCart(item, 'Squid')}>Squid</Button>
+                                  <Button className={buttonMargin} onClick={() => handleCart(item, 'Seafood')}>Seafood</Button>
+                                  <Button className={buttonMargin} onClick={() => handleCart(item, 'Duck')}>Duck</Button>
+                                  <Button className={buttonMargin} onClick={() => handleCart(item, 'Flounder Fillet')}>Flounder Fillet</Button>
                       </CardBody>
                     </Col>
                   </Row>
