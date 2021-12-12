@@ -1,4 +1,4 @@
-function SpiceLevel() {
+const SpiceLevel = () => {
   return (
     <div className="row">
       <div className="col">

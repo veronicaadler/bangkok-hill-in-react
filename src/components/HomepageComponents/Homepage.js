@@ -1,4 +1,3 @@
-import React from "react";
 import FirstHero from "./Firsthero";
 import CardDeck from "./CardDeck";
 import SecondHero from "./Secondhero";
@@ -6,7 +5,7 @@ import CardTable from "./Cardtable";
 import Header from "../Header";
 import Footer from "../Footer";
 
-function Homepage() {
+const Homepage = () => {
   return (
     <div>
       <Header />
@@ -17,6 +16,6 @@ function Homepage() {
       <Footer />
     </div>
   );
-}
+};
 
 export default Homepage;

@@ -1,6 +1,4 @@
-import React from "react";
-
-function AboutUsDescription() {
+const AboutUsDescription = () => {
   return (
     <div className="row">
       <div className="col p-0 w-0 mb-5">
@@ -44,6 +42,6 @@ function AboutUsDescription() {
       </div>
     </div>
   );
-}
+};
 
 export default AboutUsDescription;

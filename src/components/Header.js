@@ -2,7 +2,7 @@ import { Jumbotron } from "reactstrap";
 import NavbarComponent from "./HomepageComponents/Navbar";
 import { Link } from "react-router-dom";
 
-function Header() {
+const Header = () => {
   return (
     <Jumbotron fluid className="m-0 p-1">
       <div className="container">
@@ -26,13 +26,15 @@ function Header() {
               className="text-nowrap btn-link"
               role="button"
             >
-              <Link to='/order' className="btn btn-lg">Order Now</Link>
+              <Link to="/order" className="btn btn-lg">
+                Order Now
+              </Link>
             </a>
           </div>
         </div>
       </div>
     </Jumbotron>
   );
-}
+};
 
 export default Header;

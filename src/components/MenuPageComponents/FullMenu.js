@@ -1,6 +1,6 @@
 import SpiceLevel from "./SpiceLevel";
 
-function FullMenu() {
+const FullMenu = () => {
   return (
     <div className="container-fluid">
       <div className="row mt-3">
@@ -1157,6 +1157,6 @@ function FullMenu() {
       <SpiceLevel />
     </div>
   );
-}
+};
 
 export default FullMenu;

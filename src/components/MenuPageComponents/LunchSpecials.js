@@ -1,7 +1,6 @@
-import React from "react";
 import SpiceLevel from "./SpiceLevel";
 
-function LunchSpecials() {
+const LunchSpecials = () => {
   return (
     <div>
       <div className="row mt-3">
@@ -157,6 +156,6 @@ function LunchSpecials() {
       <SpiceLevel />
     </div>
   );
-}
+};
 
 export default LunchSpecials;

@@ -1,7 +1,7 @@
 import CardDeckItems from "./CardDeckItems";
 import CardDeckInfo from "../../shared/carddeckinfo";
 
-function CardDeck() {
+const CardDeck = () => {
   const CompiledCardDeck = CardDeckInfo.map((card) => (
     <CardDeckItems key={card.id} card={card} />
   ));
@@ -22,6 +22,6 @@ function CardDeck() {
       </div>
     </div>
   );
-}
+};
 
 export default CardDeck;

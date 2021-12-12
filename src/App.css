@@ -160,6 +160,14 @@ footer {
   font-size: 1em;
 }
 
+.orderlink {
+  color: white;
+}
+
+.orderlink:hover {
+  color:rgb(251, 167, 91);
+}
+
 Form {
   justify-content: center;
 }
@@ -199,4 +207,8 @@ Form {
 
 .cartbutton {
   font-size: 1.25rem;
+}
+
+.removebutton {
+  background-color: #333
 }
