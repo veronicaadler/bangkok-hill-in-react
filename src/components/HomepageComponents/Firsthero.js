@@ -1,6 +1,4 @@
-import React from "react";
-
-function FirstHero() {
+const FirstHero = () => {
   return (
     <div className="container-fluid text-center">
       <div className="row">
@@ -13,6 +11,6 @@ function FirstHero() {
       </div>
     </div>
   );
-}
+};
 
 export default FirstHero;

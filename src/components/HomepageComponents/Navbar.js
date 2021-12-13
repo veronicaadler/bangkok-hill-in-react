@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const NavbarComponent = (props) => {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <React.Fragment>
+    <div>
       <Navbar className="navbar-expand-sm navbar-light justify-content-center">
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
@@ -31,7 +31,7 @@ const NavbarComponent = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
-    </React.Fragment>
+    </div>
   );
 };
 

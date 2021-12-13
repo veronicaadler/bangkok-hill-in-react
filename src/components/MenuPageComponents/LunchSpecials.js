@@ -1,7 +1,6 @@
-import React from "react";
 import SpiceLevel from "./SpiceLevel";
 
-function LunchSpecials() {
+const LunchSpecials = () => {
   return (
     <div>
       <div className="row mt-3">
@@ -9,7 +8,7 @@ function LunchSpecials() {
           <h1 className="mb-4 menuheadings">LUNCH SPECIALS</h1>
           <h4>Available Tuesday through Friday 11:30am-3:00pm</h4>
           <h5>
-            Served with thai rolls, ravioli and choice of white or brown rice.
+            Served with thai rolls, ravioli and choice of white or brown rice
           </h5>
           <img src="assets/menu.png" alt="Bangkok Hill Logo" />
         </div>
@@ -157,6 +156,6 @@ function LunchSpecials() {
       <SpiceLevel />
     </div>
   );
-}
+};
 
 export default LunchSpecials;

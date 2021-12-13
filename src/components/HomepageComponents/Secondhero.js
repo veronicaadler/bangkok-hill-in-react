@@ -1,6 +1,4 @@
-import React from "react";
-
-function SecondHero() {
+const SecondHero = () => {
   return (
     <div className="container-fluid" id="container">
       <div className="row">
@@ -8,6 +6,6 @@ function SecondHero() {
       </div>
     </div>
   );
-}
+};
 
 export default SecondHero;

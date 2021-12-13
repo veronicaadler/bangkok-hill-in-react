@@ -1,4 +1,3 @@
-import React from "react";
 import { Table } from "reactstrap";
 import EmailForm from "./Emailform";
 
@@ -15,7 +14,7 @@ function CardTable() {
             />
           </div>
           <div className="col-md-6">
-            <div className="card-body p-4">
+            <div className="card-body maincard p-4">
               <Table
                 className="table-responsive text-nowrap"
                 id="homepagetable"

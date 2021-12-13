@@ -1,10 +1,9 @@
 import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import Homepage from "./components/HomepageComponents/Homepage";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import MenuPage from "./components/MenuPageComponents/Menupage";
 import AboutPage from "./components/AboutComponents/Aboutpage";
+import OrderNow from './components/OrderComponents/Order';
 import "./App.css";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -13,7 +12,6 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
       <TransitionGroup>
         <CSSTransition key={location.key} classNames="page" timeout={300}>
           <Switch location={location}>
@@ -26,10 +24,12 @@ function App() {
             <Route path="/about">
               <AboutPage />
             </Route>
+            <Route path='/order'>
+              <OrderNow />
+            </Route>
           </Switch>
         </CSSTransition>
       </TransitionGroup>
-      <Footer />
     </div>
   );
 }

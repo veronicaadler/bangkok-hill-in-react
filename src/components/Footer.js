@@ -1,7 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="site-footer mt-5 pt-4">
       <div className="container-fluid">
@@ -10,9 +9,7 @@ function Footer() {
             <h5>Navigation</h5>
             <ul className="list-unstyled">
               <li>
-                <Link exact to="/">
-                  HOME
-                </Link>
+                <Link to="/">HOME</Link>
               </li>
               <li>
                 <Link to="/menu">MENU</Link>
@@ -84,6 +81,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
