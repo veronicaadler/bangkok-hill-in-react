@@ -1,4 +1,5 @@
 import {
+    Container,
     Row,
     Col,
     CardBody,
@@ -7,24 +8,12 @@ import {
     CardSubtitle,
     CardText,
     Button,
-    Modal,
-    ModalFooter,
-    ModalHeader,
-    ModalBody,
   } from "reactstrap";
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import OrderMenuHeader from "./OrderMenuHeader";
 
 const OrderMenu = ({ menu, cart, handleCart }) => {
 
-    const [modal, setModal] = useState(false);
-    const [checkout, setCheckout] = useState(false);
-
-    const toggle = () => setModal(!modal);
-
     const buttonMargin = "m-1";
-
-    const totalPrice = cart.reduce((a, c) => a + parseInt(c.price), 0).toFixed(2);
 
     const renderSpice = (spice) => {
         if (spice === "Mild") {
@@ -50,39 +39,8 @@ const OrderMenu = ({ menu, cart, handleCart }) => {
       };
 
     return(
-        <div>
-        <Row className="cartrow text-right sticky-top p-2">
-          <Col className="text-left d-flex align-items-center">
-            <Link className="orderlink" to="/">Home</Link>
-          </Col>
-          <Col className="p-0 m-0">
-            <Button onClick={toggle} className="btn-large p-3 cartbutton">
-              <i className="fa fa-lg fa-shopping-cart"></i> Cart ({cart.length})
-            </Button>
-            <Modal isOpen={modal} toggle={toggle}>
-              <ModalHeader toggle={toggle}>Your Order</ModalHeader>
-              <ModalBody>
-                {cart.map((product) => {
-                  return (
-                    <Row key={product.id}>
-                      <Col><Button className="m-1 removebutton">Remove Item</Button></Col>
-                      <Col>{product.item}</Col>
-                      <Col>${product.price}</Col>
-                    </Row>
-                  );
-                })}
-                <ModalFooter>Total: ${totalPrice}</ModalFooter>
-                <div  className="text-right">
-                  <Button onClick={() => setCheckout(true)}>Proceed to Checkout</Button>
-                  {checkout
-                    ? <p>Order Processed!</p>
-                    : null
-                  }
-                </div>
-              </ModalBody>
-            </Modal>
-          </Col>
-        </Row>
+        <Container fluid>
+          <OrderMenuHeader cartitems={cart}/>
         <Row className="mt-3">
           <Col className="text-center">
             <h1 className="mb-0">BANGKOK HILL MENU</h1>
@@ -269,7 +227,7 @@ const OrderMenu = ({ menu, cart, handleCart }) => {
             );
           }
         })}
-      </div>
+      </Container>
     );
   }
         

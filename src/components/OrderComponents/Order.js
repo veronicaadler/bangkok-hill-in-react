@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import OrderMenu from './OrderMenu';
 import SpiceLevel from "../MenuPageComponents/SpiceLevel";
 
+
 const OrderNow = () => {
   const [menu, setMenuItems] = useState([]);
   const [isPending, setIsPending] = useState(true);
@@ -155,29 +156,6 @@ const OrderNow = () => {
           },
         ]);
       }
-    }
-  };
-
-  const renderSpice = (spice) => {
-    if (spice === "Mild") {
-      return <i className="fa fa-star"></i>;
-    }
-    if (spice === "Hot") {
-      return (
-        <span>
-          <i className="fa fa-star"></i>
-          <i className="fa fa-star"></i>
-        </span>
-      );
-    }
-    if (spice === "Hot and Spicy") {
-      return (
-        <span>
-          <i className="fa fa-star"></i>
-          <i className="fa fa-star"></i>
-          <i className="fa fa-star"></i>
-        </span>
-      );
     }
   };
 
