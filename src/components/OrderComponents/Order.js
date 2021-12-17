@@ -183,7 +183,7 @@ const OrderNow = () => {
   if (isPending) {
     return (
     <div className="text-center">
-      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      <i className="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
       </div>
     );
   }

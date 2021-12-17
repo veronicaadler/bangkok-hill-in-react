@@ -10,33 +10,11 @@ import {
     Button,
   } from "reactstrap";
 import OrderMenuHeader from "./OrderMenuHeader";
+import renderSpice from './RenderSpiceFunction';
 
 const OrderMenu = ({ menu, cart, handleCart }) => {
 
     const buttonMargin = "m-1";
-
-    const renderSpice = (spice) => {
-        if (spice === "Mild") {
-          return <i className="fa fa-star"></i>;
-        }
-        if (spice === "Hot") {
-          return (
-            <span>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-            </span>
-          );
-        }
-        if (spice === "Hot and Spicy") {
-          return (
-            <span>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-            </span>
-          );
-        }
-      };
 
     return(
         <Container fluid>
