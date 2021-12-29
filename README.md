@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Bangkok Hill 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created as an honors project for Nucamp Coding Bootcamp, this project is the React version of the new Bangkok Hill website.  Designed for a local Thai restaurant, it demonstrates use of responsive, mobile-first design principles.   
 
-## Available Scripts
 
-In the project directory, you can run:
+## Motivation
 
-### `yarn start`
+This project was designed and developed to provide Bangkok Hill with a new, mobile friendly website that could serve as the foundation of a strong online presence.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A newly added online ordering feature allows user to select menu items, add to an online cart and intilialize an order.
 
-### `yarn test`
+## Installation
+* Clone / download bangkok-hill-in-react.
+* Open the bangkok-hill-in-react folder in code editor or terminal.
+* Install dependencies with:
+```
+$ npm install
+```
+* Once installation is complete, enter the following command in the terminal to begin the .json server:
+```
+$ npx json-server --watch data/db.json --port 8000
+```
+* Open a second terminal in the bangkok-hill-in-react folder and start the server with:
+```
+$ npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Acknowledgements
+The logo utilized on this webpage was designed on Free Logo Design [https://www.freelogodesign.org/]. The color palette was designed with the help of Colormind [http://colormind.io/]. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+All photos and images are taken by the generous photographers at Unsplash [https://unsplash.com/] and Pexels [https://www.pexels.com/]. Special acknowledgements to the photographer who took the hero image of Pad Thai, Alyssa Kowalski [https://unsplash.com/@lockandkey].
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I used both W3School's tutorial on creating hero images [https://www.w3schools.com/howto/howto_css_hero_image.asp] and the following Github Gist by Adamdehaven [https://gist.github.com/adamdehaven/dceabb07450295fec6fc] to build my own design using hero images.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The email subscription form was inspired by the samples provided on Bootsnipp by w3hubs: [https://bootsnipp.com/snippets/BEpnz].
