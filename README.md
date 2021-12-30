@@ -9,7 +9,7 @@ This project was designed and developed to provide Bangkok Hill with a new, mobi
 
 ## Features
 
-A newly added online ordering feature allows user to select menu items, add to an online cart and intilialize an order.
+A newly added online ordering feature allows user to select menu items, add to an online cart and initialize an order.
 
 ## Installation
 * Clone / download bangkok-hill-in-react.
