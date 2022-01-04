@@ -160,7 +160,7 @@ const OrderNow = () => {
   };
 
   useEffect(() => { //fetches the menu from the server
-    fetch("http://localhost:8000/menu")
+    fetch("https://json-server-for-heroku.herokuapp.com/menu")
       .then((res) => {
         if (!res.ok) {
           //checks for unsuccessful responses from the server
