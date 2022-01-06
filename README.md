@@ -18,14 +18,11 @@ A newly added online ordering feature allows user to select menu items, add to a
 ```
 $ npm install
 ```
-* Once installation is complete, enter the following command in the terminal to begin the .json server:
-```
-$ npx json-server --watch data/db.json --port 8000
-```
-* Open a second terminal in the bangkok-hill-in-react folder and start the server with:
+* Once complete, start the server with:
 ```
 $ npm start
 ```
+* Note:  A web browser should automatically open the Bangkok Hill website.  If not, you can open a browser and manually navigate to http://localhost:3000/.
 
 
 ## Acknowledgements
