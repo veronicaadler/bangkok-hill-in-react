@@ -24,6 +24,13 @@ $ npm start
 ```
 * Note:  A web browser should automatically open the Bangkok Hill website.  If not, you can open a browser and manually navigate to http://localhost:3000/.
 
+## Screenshots
+
+![screenshot of homepage](public/assets/screenshots/homepage.png)
+
+![lunch specials](public/assets/screenshots/lunchspecialsmenu.png)
+
+
 
 ## Acknowledgements
 The logo utilized on this webpage was designed on Free Logo Design [https://www.freelogodesign.org/]. The color palette was designed with the help of Colormind [http://colormind.io/]. 

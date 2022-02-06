@@ -10,7 +10,7 @@ const AboutPage = () => {
       <div className="container-fluid" id="aboutus">
         <div className="row">
           <div className="col-12 p-3 mt-2">
-            <h1 id="aboutusheading" className="text-center card-title">
+            <h1 id="aboutusheading" className="text-center maincardtitle">
               OUR STORY
             </h1>
           </div>
